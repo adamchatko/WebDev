@@ -1,1 +1,2 @@
-# The Complete Web Development Bootcamp by Dr. Angela Yu
+# The Complete Web Development Bootcamp
+by Dr. Angela Yu
