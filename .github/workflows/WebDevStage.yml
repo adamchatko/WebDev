@@ -1,0 +1,13 @@
+name: Web Development Bootcamp
+run-name: Learning by Doing
+on:
+  push:
+    paths:
+      - 'stage/**'
+      
+jobs:
+  Deploy-to-Production:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - run: curl -X POST -d api_key=${{ secrets.API_KEY }} -d environment=staging -d sha=${{ github.sha }} https://staging.sleuth.io/api/1/deployments/king-julian/webdev/register_deploy
