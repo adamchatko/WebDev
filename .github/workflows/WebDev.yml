@@ -1,8 +1,7 @@
 name: Web Development Bootcamp
 run-name: Learning by Doing
 on:
-  workflow_run
-  #workflow_dispatch:
+  workflow_dispatch
     #inputs:
       #environment:
         #description: "Deploy to:"
