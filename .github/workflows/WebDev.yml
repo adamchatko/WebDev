@@ -1,16 +1,13 @@
 name: Web Development Bootcamp
 run-name: Learning by Doing
 on:
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: "Deploy to:"
-        required: True
-        default: "staging"
-        type: environment
-        options:
-          - production
-          - staging
+  workflow_dispatch#:
+    #inputs:
+      #environment:
+        #description: "Deploy to:"
+        #required: True
+        #default: "staging"
+        #type: environment
       
 jobs:
   Deploy-to-Environment:
