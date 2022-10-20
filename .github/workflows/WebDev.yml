@@ -15,8 +15,8 @@ on:
 jobs:
   Deploy-to-Environment:
     runs-on: ubuntu-latest
-    environment: $ENVIRONMENT
+    environment: staging
     steps:
-      - run: curl -X POST -d api_key=${{ secrets.API_KEY }} -d environment=$ENVIRONMENT -d sha=${{ github.sha }} https://staging.sleuth.io/api/1/deployments/king-julian/webdev/register_deploy
+      - run: curl -X POST -d api_key=${{ secrets.API_KEY }} -d environment=staging -d sha=${{ github.sha }} https://staging.sleuth.io/api/1/deployments/king-julian/webdev/register_deploy
         env:
           ENVIRONMENT: ${{ inputs.environment }}
